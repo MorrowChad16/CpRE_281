@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 22 09:47:02 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : adder-subtractor
+Top-level Entity Name : adder-subtractor
+Family : Cyclone IV E
+Total logic elements : 9
+    Total combinational functions : 9
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

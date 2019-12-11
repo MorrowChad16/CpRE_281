@@ -1,0 +1,13 @@
+|lab10step2a
+Q1 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Clk => inst20.CLK
+Clk => inst21.CLK
+Clk => inst22.CLK
+Clk => inst23.CLK
+En => inst16.IN1
+En => inst.IN0
+Q2 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+Q3 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+Q4 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+
+

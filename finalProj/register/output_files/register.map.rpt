@@ -1,0 +1,369 @@
+Analysis & Synthesis report for register
+Mon Dec 09 22:51:06 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 09 22:51:06 2019           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; register                                        ;
+; Top-level Entity Name              ; register                                        ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 193                                             ;
+;     Total combinational functions  ; 161                                             ;
+;     Dedicated logic registers      ; 62                                              ;
+; Total registers                    ; 62                                              ;
+; Total pins                         ; 75                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; register           ; register           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------+---------+
+; register.bdf                     ; yes             ; User Block Diagram/Schematic File        ; U:/CPRE281/finalProj/register/register.bdf           ;         ;
+; seven_seg_decoder.v              ; yes             ; Auto-Found Verilog HDL File              ; U:/CPRE281/finalProj/register/seven_seg_decoder.v    ;         ;
+; decoder.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/decoder.bdf            ;         ;
+; 2mux.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/2mux.bdf               ;         ;
+; counter.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/counter.bdf            ;         ;
+; clock_generator.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/clock_generator.bdf    ;         ;
+; clock_divider_1024.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/clock_divider_1024.bdf ;         ;
+; comparator.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/comparator.bdf         ;         ;
+; adder_4bit.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/adder_4bit.bdf         ;         ;
+; full_adder.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/full_adder.bdf         ;         ;
+; mux.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/finalProj/register/mux.bdf                ;         ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 193               ;
+;                                             ;                   ;
+; Total combinational functions               ; 161               ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 121               ;
+;     -- 3 input functions                    ; 24                ;
+;     -- <=2 input functions                  ; 16                ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 161               ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 62                ;
+;     -- Dedicated logic registers            ; 62                ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 75                ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; counter:inst34|Q0 ;
+; Maximum fan-out                             ; 36                ;
+; Total fan-out                               ; 848               ;
+; Average fan-out                             ; 2.27              ;
++---------------------------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                    ; Entity Name        ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------------+--------------+
+; |register                           ; 161 (4)             ; 62 (32)                   ; 0           ; 0            ; 0       ; 0         ; 75   ; 0            ; |register                                                              ; register           ; work         ;
+;    |comparator:inst33|              ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|comparator:inst33                                            ; comparator         ; work         ;
+;       |adder_4bit:inst|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|comparator:inst33|adder_4bit:inst                            ; adder_4bit         ; work         ;
+;          |full_adder:inst6|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|comparator:inst33|adder_4bit:inst|full_adder:inst6           ; full_adder         ; work         ;
+;          |full_adder:inst7|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|comparator:inst33|adder_4bit:inst|full_adder:inst7           ; full_adder         ; work         ;
+;          |full_adder:inst8|         ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|comparator:inst33|adder_4bit:inst|full_adder:inst8           ; full_adder         ; work         ;
+;          |full_adder:inst|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|comparator:inst33|adder_4bit:inst|full_adder:inst            ; full_adder         ; work         ;
+;    |counter:inst34|                 ; 40 (4)              ; 30 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|counter:inst34                                               ; counter            ; work         ;
+;       |clock_generator:inst|        ; 36 (8)              ; 27 (7)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|counter:inst34|clock_generator:inst                          ; clock_generator    ; work         ;
+;          |clock_divider_1024:inst8| ; 14 (14)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|counter:inst34|clock_generator:inst|clock_divider_1024:inst8 ; clock_divider_1024 ; work         ;
+;          |clock_divider_1024:inst|  ; 14 (14)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|counter:inst34|clock_generator:inst|clock_divider_1024:inst  ; clock_divider_1024 ; work         ;
+;    |decoder:3to8|                   ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|decoder:3to8                                                 ; decoder            ; work         ;
+;    |decoder:3to9|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|decoder:3to9                                                 ; decoder            ; work         ;
+;    |mux:curr1|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|mux:curr1                                                    ; mux                ; work         ;
+;    |mux:curr2|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|mux:curr2                                                    ; mux                ; work         ;
+;    |mux:inst74|                     ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|mux:inst74                                                   ; mux                ; work         ;
+;    |mux:next1|                      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|mux:next1                                                    ; mux                ; work         ;
+;    |mux:next2|                      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|mux:next2                                                    ; mux                ; work         ;
+;    |mux:next3|                      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|mux:next3                                                    ; mux                ; work         ;
+;    |seven_seg_decoder:reg0|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg0                                       ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:reg1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg1                                       ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:reg2|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg2                                       ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:reg3|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg3                                       ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:reg4|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg4                                       ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:reg5|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg5                                       ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:reg6|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg6                                       ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:reg7|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|seven_seg_decoder:reg7                                       ; seven_seg_decoder  ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 75                          ;
+; cycloneiii_ff         ; 62                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 61                          ;
+; cycloneiii_lcell_comb ; 170                         ;
+;     normal            ; 170                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 121                         ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.22                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Mon Dec 09 22:50:54 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register -c register
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file register.bdf
+    Info (12023): Found entity 1: register
+Info (12127): Elaborating entity "register" for the top level hierarchy
+Warning (275011): Block or symbol "seven_seg_decoder" of instance "reg4" overlaps another block or symbol
+Warning (275011): Block or symbol "2mux" of instance "inst42" overlaps another block or symbol
+Warning (275043): Pin "led0" is missing source
+Warning (12125): Using design file seven_seg_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: seven_seg_decoder File: U:/CPRE281/finalProj/register/seven_seg_decoder.v Line: 1
+Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:reg0"
+Warning (12125): Using design file decoder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: decoder
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:3to8"
+Warning (12125): Using design file 2mux.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 2mux
+Info (12128): Elaborating entity "2mux" for hierarchy "2mux:inst42"
+Warning (12125): Using design file counter.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: counter
+Info (12128): Elaborating entity "counter" for hierarchy "counter:inst34"
+Warning (275011): Block or symbol "NOT" of instance "inst8" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst15" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst17" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst19" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst26" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst28" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst31" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst33" overlaps another block or symbol
+Warning (12125): Using design file clock_generator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clock_generator
+Info (12128): Elaborating entity "clock_generator" for hierarchy "counter:inst34|clock_generator:inst"
+Warning (12125): Using design file clock_divider_1024.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clock_divider_1024
+Info (12128): Elaborating entity "clock_divider_1024" for hierarchy "counter:inst34|clock_generator:inst|clock_divider_1024:inst8"
+Warning (12125): Using design file comparator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: comparator
+Info (12128): Elaborating entity "comparator" for hierarchy "comparator:inst33"
+Warning (12125): Using design file adder_4bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: adder_4bit
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "comparator:inst33|adder_4bit:inst"
+Warning (12125): Using design file full_adder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: full_adder
+Info (12128): Elaborating entity "full_adder" for hierarchy "comparator:inst33|adder_4bit:inst|full_adder:inst"
+Warning (12090): Entity "mux" obtained from "mux.bdf" instead of from Quartus Prime megafunction library
+Warning (12125): Using design file mux.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux
+Info (12128): Elaborating entity "mux" for hierarchy "mux:next3"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led0" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 269 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 194 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Mon Dec 09 22:51:06 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:17
+
+

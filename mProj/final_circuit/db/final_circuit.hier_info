@@ -1,0 +1,33 @@
+|final_circuit
+f <= negate.DB_MAX_OUTPUT_PORT_TYPE
+w => inst.IN0
+w => bob_circuit:bob.w
+w => and3.IN0
+x => inst1.IN0
+x => and2.IN1
+x => bob_circuit:bob.x
+x => and3.IN1
+y => and1.IN2
+y => and2.IN2
+y => bob_circuit:bob.y
+y => and3.IN2
+z => and1.IN3
+z => and2.IN3
+z => bob_circuit:bob.z
+z => and3.IN3
+
+
+|final_circuit|bob_circuit:bob
+w => f.IN0
+w => f.IN0
+x => f.IN0
+x => f.IN1
+y => f.IN1
+y => f.IN1
+y => f.IN1
+z => f.IN1
+z => f.IN1
+z => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

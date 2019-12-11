@@ -1,0 +1,8 @@
+|Lab4step1
+f => Decoder0.IN0
+c => Decoder0.IN1
+g => Decoder0.IN2
+w => Decoder0.IN3
+a << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
